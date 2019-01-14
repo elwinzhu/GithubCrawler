@@ -35,30 +35,25 @@ class UserItem(scrapy.Item):
     skills = scrapy.Field()
 
 
-class RepoOwner(scrapy.Item):
-    id = scrapy.Field()
-    apiUrl = scrapy.Field()
-    htmlUrl = scrapy.Field()
-
-
-class RepositoryItem(scrapy.Item):
-    id = scrapy.Field()
-    nodeId = scrapy.Field()
-    name = scrapy.Field()
-    fullName = scrapy.Field()
-    htmlUrl = scrapy.Field()
-    contributorsUrl = scrapy.Field()
-    devLang = scrapy.Field()
-    stars = scrapy.Field()
-    forks = scrapy.Field()
-    score = scrapy.Field()
-
-    owner = RepoOwner()
-
-    # currently a bug from github: number of watchers always follows the number of stars
-    watchers = scrapy.Field()
-
-
-class ContributorItem(scrapy.Item):
-    contributor = UserItem()
-    contributions = scrapy.Field()
+# class RepoOwner(scrapy.Item):
+#     id = scrapy.Field()
+#     apiUrl = scrapy.Field()
+#     htmlUrl = scrapy.Field()
+#
+#
+# class RepositoryItem(scrapy.Item):
+#     id = scrapy.Field()
+#     nodeId = scrapy.Field()
+#     name = scrapy.Field()
+#     fullName = scrapy.Field()
+#     htmlUrl = scrapy.Field()
+#     contributorsUrl = scrapy.Field()
+#     devLang = scrapy.Field()
+#     stars = scrapy.Field()
+#     forks = scrapy.Field()
+#     score = scrapy.Field()
+#
+#     owner = RepoOwner()
+#
+#     # currently a bug from github: number of watchers always follows the number of stars
+#     watchers = scrapy.Field()
